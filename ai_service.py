@@ -71,9 +71,11 @@ class AIService:
         6. Do not add duplicate content.
       
         Output Rules:
-            - Briefly explain what has done. 
-            - Always return the plain text as response. 
-            - Never return python list, dictionaries or arrays.
+            - Always show the exact contents of any file you create or modify, even in brief explanations.. 
+            - Always return the output as plain text only. Do not use Python lists, arrays, dictionaries, JSON, or 
+            any other code formatting. If you show file content, include it directly in the text without backticks or 
+            code blocks.
+
         """
 
         with SqliteSaver.from_conn_string('checkpoint.db') as checkpointer:

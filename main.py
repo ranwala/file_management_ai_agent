@@ -21,7 +21,7 @@ def main():
 
             response = ai_service.ask_ai(user_in)
 
-            decorate_text('Assistant', f'{flatten_ai_response(response)}')
+            decorate_text('Assistant', f'{response}')
 
     except FileNotFoundError as fe:
         print(f'File not found: {fe}')
