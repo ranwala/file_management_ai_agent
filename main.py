@@ -1,5 +1,5 @@
 import uuid
-from text_decoration_helper import decorate_text, flatten_ai_response
+from text_decoration_helper import decorate_text
 
 from ai_service import AIService
 
@@ -10,7 +10,7 @@ def main():
         # Generate instance for AI Service
         ai_service = AIService(msg_id)
 
-        # Display introduction text
+        # Display the introduction text
         decorate_text()
 
         while True:
@@ -29,6 +29,8 @@ def main():
         print(f'Permission Error: {pe}')
     except OSError as oe:
         print(f'Os Error: {oe}')
+    except AttributeError as ae:
+        print(f'Attribute Error: {ae}')
     except ValueError as ve:
         print(f'ValueError: {ve}')
     except Exception as e:

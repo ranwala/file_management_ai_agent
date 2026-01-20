@@ -22,9 +22,10 @@ def __get_intro_text():
     return intro_message
 
 def decorate_text(
-        title="🤖Code Assistant",
-        message=__get_intro_text()):
+        title = "🤖Code Assistant",
+        message = __get_intro_text()):
     """ Use rich library to decorate and display the decorated text """
+
     panel = Panel(
         message,
         title=title,
@@ -34,12 +35,3 @@ def decorate_text(
     )
 
     console.print(panel)
-
-def flatten_ai_response(response):
-    """ Filter the AI response and return a flattened version of the response."""
-    if isinstance(response, list):
-        return ''.join(item.get('text') for item in response if item.get('type') == 'text')
-    elif isinstance(response, dict):
-        return response.get('text')
-    else:
-        return response

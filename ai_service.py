@@ -67,11 +67,13 @@ class AIService:
             
         5. If the user says "add more data" or "update it" without a file name:
             - use the most recently created or modified file as the target.
+            - read the file contents.
+            - add more similar data to the file.
             
         6. Do not add duplicate content.
       
         Output Rules:
-            - Always show the exact contents of any file you create or modify, even in brief explanations.. 
+            - Always show the exact contents of any file you create or modify, even in brief explanations.
             - Always return the output as plain text only. Do not use Python lists, arrays, dictionaries, JSON, or 
             any other code formatting. If you show file content, include it directly in the text without backticks or 
             code blocks.
